@@ -1,0 +1,39 @@
+﻿@model List<Doctor>;
+
+<h1>Contacts List</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">FirstName</th>
+            <th scope="col">Name</th>
+            <th scope="col">LastName</th>
+            <th scope="col">Birthday</th>
+            <th scope="col">Categori</th>
+            <th scope="col">Work_experience</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var i in Model)
+        {
+            <tr>
+                <th scope="row">@i.Id</th>
+                <td>
+                    @i.FirstName;
+                   
+                </td>
+                <td>
+                   @i.Name;</td>
+                <td>
+                    @i.LastName;
+                </td>
+                <td>@i.Birthday</td>
+                <td>@i.Categori</td>
+                <td>@i.Work_experience</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<p>Count: @Model.Count</p>
